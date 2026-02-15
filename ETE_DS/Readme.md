@@ -13,3 +13,9 @@ package , it is generally empty and just requiered to make a ete project. (Inter
     (Python installs your project as a link, not a copy
     If you modify your source code, changes work immediately
     You don’t need to reinstall every time.)
+    "pip install -r requirments.txt"
+
+6. Creating a components folder in src to make the project more robust.
+
+7. Creating a pipeline folder in src.
+

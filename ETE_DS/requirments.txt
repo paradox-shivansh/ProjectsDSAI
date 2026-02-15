@@ -4,5 +4,6 @@ seaborn
 torch
 matplotlib
 scikit-learn
-
+catboost
+xgboost
 -e .

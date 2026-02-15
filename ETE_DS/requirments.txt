@@ -3,5 +3,6 @@ numpy
 seaborn
 torch
 matplotlib
+scikit-learn
 
 -e .

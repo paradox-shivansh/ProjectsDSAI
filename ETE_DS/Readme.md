@@ -32,3 +32,9 @@ package , it is generally empty and just requiered to make a ete project. (Inter
     5. This helps in debugging large pipelines.
 
     [ remember Exception is a built in class in python]
+
+
+10. Creating a logging.py file
+    The logging module in Python is used to record events, errors, and messages while a program is running. It is the standard way to track program execution, especially in ML pipelines and production systems.
+
+11.

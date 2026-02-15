@@ -37,4 +37,6 @@ package , it is generally empty and just requiered to make a ete project. (Inter
 10. Creating a logging.py file
     The logging module in Python is used to record events, errors, and messages while a program is running. It is the standard way to track program execution, especially in ML pipelines and production systems.
 
-11.
+11. Completing EDA 
+
+12. COMPLETING MODEL TRAINING

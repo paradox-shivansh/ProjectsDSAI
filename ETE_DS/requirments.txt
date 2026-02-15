@@ -3,3 +3,5 @@ numpy
 seaborn
 torch
 matplotlib
+
+-e .

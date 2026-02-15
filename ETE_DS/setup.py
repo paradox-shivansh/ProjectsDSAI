@@ -1,10 +1,38 @@
 from setuptools import setup, find_packages
+from typing import List
 
-def get_reqirments(file_path):
+
+
+HYPEN_E_DOT = "-e ."
+
+# def get_reqirments(file_path):
+#     with open(file_path) as f:
+#         req = f.read().splitlines()
+        
+#     if HYPEN_E_DOT in req:
+#         req.remove(HYPEN_E_DOT)
+        
+        
+#     return req
+
+
+# def get_reqirments(file_path:str)->list[str]:
+#     with open(file_path) as f:
+#        requirments=f.readlines()
+#        requirments=[req.replace("\n","") for req in requirments] 
+
+
+# BEST METHOD TO GET REQUIRMENTS FROM A FILE
+def get_reqirments(file_path: str) -> List[str]:
     with open(file_path) as f:
         req = f.read().splitlines()
+        
+    if HYPEN_E_DOT in req:
+        req.remove(HYPEN_E_DOT)
+        
+        
     return req
-    
+
 
 
 setup(
@@ -14,7 +42,7 @@ setup(
     author_email='theaverageguy19@gmail.com',
     description='A package for data science utilities',
     packages=find_packages(),
-    install_requires=['pandas', 'numpy', 'scikit-learn', 'matplotlib', 'seaborn'],
-    install_requires=get_reqirments('requirements.txt') ,
+    # install_requires=['pandas', 'numpy', 'scikit-learn', 'matplotlib', 'seaborn'],
+    install_requires=get_reqirments('requirments.txt') ,
     
 )

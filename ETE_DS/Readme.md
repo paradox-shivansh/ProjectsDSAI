@@ -19,3 +19,16 @@ package , it is generally empty and just requiered to make a ete project. (Inter
 
 7. Creating a pipeline folder in src.
 
+8. Creating all file in the src folder.
+
+9. Making the exception.py file in src
+    using the [sys] for the exception haldeling
+    In end-to-end ML projects, sys is mainly used in the exception handling file to get detailed error information like:
+
+    1. error message
+    2. file name
+    3. line number
+    4. exact location of failure
+    5. This helps in debugging large pipelines.
+
+    [ remember Exception is a built in class in python]

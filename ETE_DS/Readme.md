@@ -40,3 +40,5 @@ package , it is generally empty and just requiered to make a ete project. (Inter
 11. Completing EDA 
 
 12. COMPLETING MODEL TRAINING
+
+13. Making the data_ingesation file and completing the codes for the new artifact folder

@@ -45,3 +45,6 @@ package , it is generally empty and just requiered to make a ete project. (Inter
 
 13. Make the model trainer file and hadd hyperparameters, the functions are added to the utils file
 
+
+14. Prediction pipe line working and management
+

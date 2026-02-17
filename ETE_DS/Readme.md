@@ -42,3 +42,6 @@ package , it is generally empty and just requiered to make a ete project. (Inter
 12. COMPLETING MODEL TRAINING
 
 13. Making the data_ingesation file and completing the codes for the new artifact folder
+
+13. Make the model trainer file and hadd hyperparameters, the functions are added to the utils file
+

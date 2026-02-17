@@ -5,8 +5,11 @@ from datetime import datetime
 # Create log file name
 LOG_FILE = f"{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log"
 
+# Get project root directory (two levels up from src folder)
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
 # Create logs folder path
-logs_dir = os.path.join(os.getcwd(), "logs")
+logs_dir = os.path.join(project_root, "logs")
 
 # Create logs folder if not exists
 os.makedirs(logs_dir, exist_ok=True)
@@ -14,15 +17,23 @@ os.makedirs(logs_dir, exist_ok=True)
 # Full log file path
 LOG_FILE_PATH = os.path.join(logs_dir, LOG_FILE)
 
-# Configure logging
-logging.basicConfig(
-    filename=LOG_FILE_PATH,
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
+# Create a logger object
+logger = logging.getLogger('ETE_DS')
+logger.setLevel(logging.INFO)
 
-# Test logging
-# logging.info("Logging setup successful")
+# Create file handler
+file_handler = logging.FileHandler(LOG_FILE_PATH)
+file_handler.setLevel(logging.INFO)
 
-# if __name__=='__main__':
-#     logging.info("Logging has started")
+# Create console handler
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+
+# Create formatter
+formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+file_handler.setFormatter(formatter)
+console_handler.setFormatter(formatter)
+
+# Add handlers to logger
+logger.addHandler(file_handler)
+logger.addHandler(console_handler)

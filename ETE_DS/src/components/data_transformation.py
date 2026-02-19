@@ -41,7 +41,7 @@ class DataTransformation:
             cat_pipeline = Pipeline(
                 steps=[
                     ('imputer', SimpleImputer(strategy='most_frequent')),
-                    ('one_hot_encoder', OneHotEncoder()),
+                    ('one_hot_encoder', OneHotEncoder(handle_unknown='ignore')),
                     ('scaler', StandardScaler(with_mean=False))
                 ]
             )   
@@ -80,10 +80,10 @@ class DataTransformation:
             target_column_name = 'math_score'
             numerical_columns = ['reading_score', 'writing_score']
             
-            input_feature_train_df = train_df.drop(columns=[target_column_name], axis=1)
+            input_feature_train_df = train_df.drop(columns=[target_column_name])
             target_feature_train_df = train_df[target_column_name]
             
-            input_feature_test_df = test_df.drop(columns=[target_column_name], axis=1)
+            input_feature_test_df = test_df.drop(columns=[target_column_name])
             target_feature_test_df = test_df[target_column_name]
             
             logger.info(f"Applying preprocessing object on training dataframe and testing dataframe.")
